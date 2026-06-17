@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Submit Manuscript — JACIS</title>
+<meta name="description" content="Submit a manuscript to the Journal of Applied Computing & Intelligent Systems.">
+<link rel="stylesheet" href="styles.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@500;600;700&family=Source+Sans+3:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<div class="topbar">
+  <div class="container">
+    <span class="issn">ISSN 3049-1187 (Online) &nbsp;·&nbsp; ISSN 3049-1179 (Print)</span>
+    <div class="topbar-links">
+      <a href="submit.html">Submit manuscript</a>
+      <a href="contact.html">Contact editorial office</a>
+    </div>
+  </div>
+</div>
+
+<header class="site-header">
+  <div class="container">
+    <a href="index.html" class="brand">
+      <span class="brand-mark">JACIS</span>
+      <span class="brand-sub">Journal of Applied Computing &amp; Intelligent Systems</span>
+    </a>
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="main-nav" aria-label="Primary">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="board.html">Editorial Board</a></li>
+        <li><a href="current-issue.html">Current Issue</a></li>
+        <li><a href="archives.html">Archives</a></li>
+        <li><a href="articles.html">Articles</a></li>
+        <li><a href="guidelines.html">Author Guidelines</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <div class="page-header">
+    <div class="container">
+      <span class="eyebrow">For authors</span>
+      <h1>Submit a manuscript</h1>
+      <p>Please review the <a href="guidelines.html">author guidelines</a> before submitting. This form captures manuscript details; you'll receive a tracking number by email once submitted.</p>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+      <div class="layout-2col">
+
+        <div class="form-card">
+          <form data-submission-form novalidate>
+
+            <div class="field">
+              <label for="title">Manuscript title</label>
+              <input type="text" id="title" name="title" required>
+            </div>
+
+            <div class="field-row">
+              <div class="field">
+                <label for="corresponding-author">Corresponding author</label>
+                <input type="text" id="corresponding-author" name="corresponding-author" required>
+              </div>
+              <div class="field">
+                <label for="email">Email address</label>
+                <input type="email" id="email" name="email" required>
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="affiliation">Affiliation</label>
+              <input type="text" id="affiliation" name="affiliation" required>
+            </div>
+
+            <div class="field-row">
+              <div class="field">
+                <label for="article-type">Article type</label>
+                <select id="article-type" name="article-type" required>
+                  <option value="">Select one</option>
+                  <option>Research article</option>
+                  <option>Survey / review</option>
+                  <option>Short communication</option>
+                  <option>Systems / tool paper</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="topic-area">Primary topic area</label>
+                <select id="topic-area" name="topic-area" required>
+                  <option value="">Select one</option>
+                  <option>Machine Learning</option>
+                  <option>Security &amp; Systems</option>
+                  <option>Natural Language Processing</option>
+                  <option>IoT &amp; Edge Computing</option>
+                  <option>Human-Computer Interaction</option>
+                  <option>Other</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="abstract">Abstract (150–250 words)</label>
+              <textarea id="abstract" name="abstract" rows="6" required></textarea>
+            </div>
+
+            <div class="field">
+              <label for="keywords">Keywords</label>
+              <input type="text" id="keywords" name="keywords" placeholder="e.g. ransomware detection, deep learning, network security">
+              <p class="hint">Separate keywords with commas. 4–6 recommended.</p>
+            </div>
+
+            <div class="field">
+              <label for="manuscript-file">Manuscript file</label>
+              <input type="file" id="manuscript-file" name="manuscript-file" accept=".pdf,.doc,.docx">
+              <p class="hint">PDF or Word document, anonymized for double-blind review.</p>
+            </div>
+
+            <div class="field">
+              <label for="cover-letter">Cover letter (optional)</label>
+              <textarea id="cover-letter" name="cover-letter" rows="4"></textarea>
+            </div>
+
+            <div class="field checkbox-field">
+              <input type="checkbox" id="confirm-original" required>
+              <label for="confirm-original" style="margin:0; font-weight:400;">I confirm this manuscript is original, unpublished, and not under review elsewhere.</label>
+            </div>
+
+            <div class="field checkbox-field">
+              <input type="checkbox" id="confirm-ethics" required>
+              <label for="confirm-ethics" style="margin:0; font-weight:400;">I have read and agree to the <a href="guidelines.html#ethics">publication ethics policy</a>.</label>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Submit manuscript</button>
+
+            <div class="form-status" role="alert"></div>
+          </form>
+        </div>
+
+        <aside>
+          <div class="sidebar-card">
+            <h3>Before you submit</h3>
+            <ul>
+              <li>Manuscript is anonymized for review</li>
+              <li>Abstract is 150–250 words</li>
+              <li>References follow IEEE numbered style</li>
+              <li>Title page prepared as a separate file</li>
+            </ul>
+          </div>
+          <div class="sidebar-card">
+            <h3>What happens next</h3>
+            <ul>
+              <li>You receive a manuscript tracking number by email</li>
+              <li>Editorial screening within 5 working days</li>
+              <li>First decision in a median of 23 days</li>
+            </ul>
+          </div>
+          <div class="sidebar-card">
+            <h3>Need help?</h3>
+            <p style="font-size:14px; margin-bottom:14px;">Questions about formatting or scope before you submit?</p>
+            <a href="contact.html" class="btn btn-ghost btn-small">Contact editorial office</a>
+          </div>
+        </aside>
+
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4>JACIS</h4>
+        <p>Journal of Applied Computing &amp; Intelligent Systems is a peer-reviewed venue for research in machine learning, intelligent systems, and applied computing.</p>
+      </div>
+      <div>
+        <h4>Navigate</h4>
+        <ul>
+          <li><a href="about.html">About the journal</a></li>
+          <li><a href="board.html">Editorial board</a></li>
+          <li><a href="guidelines.html">Author guidelines</a></li>
+          <li><a href="archives.html">Archives</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>For authors</h4>
+        <ul>
+          <li><a href="submit.html">Submit a manuscript</a></li>
+          <li><a href="guidelines.html#formatting">Formatting templates</a></li>
+          <li><a href="guidelines.html#ethics">Publication ethics</a></li>
+          <li><a href="contact.html">Editorial office</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Indexed in</h4>
+        <div class="indexing-list">
+          <span>Scopus</span>
+          <span>DOAJ</span>
+          <span>Google Scholar</span>
+          <span>Crossref</span>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Journal of Applied Computing &amp; Intelligent Systems. All rights reserved.</span>
+      <span>ISSN 3049-1187 (Online) · ISSN 3049-1179 (Print)</span>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
