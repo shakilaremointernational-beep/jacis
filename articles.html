@@ -14,7 +14,7 @@
 
 <div class="topbar">
   <div class="container">
-    <span class="issn">Peer-reviewed · Open access option</span>
+    <span class="issn">Peer-reviewed · Open access option · ISSN: Applied for</span>
     <div class="topbar-links">
       <a href="submit.html">Submit manuscript</a>
       <a href="contact.html">Contact editorial office</a>
@@ -52,29 +52,161 @@
     <div class="container">
       <span class="eyebrow">Browse</span>
       <h1>Articles</h1>
-      <p>Access the published JATAIR journal issue below.</p>
+      <p>Search across all published articles, or filter by topic area.</p>
     </div>
   </div>
 
   <section class="section">
     <div class="container">
 
+      <div class="search-bar">
+        <input type="search" data-article-search placeholder="Search by title, author, or keyword…" aria-label="Search articles">
+        <select data-topic-filter aria-label="Filter by topic">
+          <option value="all">All topics</option>
+          <option value="autonomy">Autonomous Flight &amp; UAVs</option>
+          <option value="avionics">Avionics &amp; Flight-Critical Systems</option>
+          <option value="atc">Air Traffic Management</option>
+          <option value="maintenance">Maintenance &amp; Structural Health</option>
+          <option value="hf">Human Factors &amp; Cockpit Systems</option>
+        </select>
+      </div>
 
-
-      <article class="citation-card" data-article-card data-topic="all">
+      <article class="citation-card" data-article-card data-topic="avionics">
         <div class="citation-card__head">
-          <span class="citation-card__tag">Journal Issue</span>
-          <span class="citation-card__pages">JATAIR — Full Issue</span>
+          <span class="citation-card__tag">Research Article</span>
+          <span class="citation-card__pages">JATAIR 6(2), pp. 98–117</span>
         </div>
-        <h3 class="citation-card__title"><a href="JATAIR.pdf">JATAIR — Journal of Aviation Technology &amp; AI Research</a></h3>
-        <p class="citation-card__authors">JATAIR Editorial Board</p>
-        <p class="citation-card__abstract">The complete published issue of the Journal of Aviation Technology &amp; AI Research. Click the link below to open or download the full PDF.</p>
+        <h3 class="citation-card__title"><a href="#">Reinforcement Learning for Adaptive Flight Envelope Protection in Fly-by-Wire Systems</a></h3>
+        <p class="citation-card__authors">D. Whitcombe, R. Iyer, M. Solberg</p>
+        <p class="citation-card__abstract">Proposes a reinforcement learning controller that adapts flight envelope protection limits in real time under degraded aerodynamic conditions.</p>
+        <div class="citation-card__meta">Whitcombe, D., Iyer, R., & Solberg, M. (2026). JATAIR, 6(2), 98–117. https://doi.org/10.5281/jatair.2026.0602.098</div>
         <div class="citation-card__actions">
-          <a href="JATAIR.pdf" class="btn btn-primary btn-small">Download JATAIR.pdf</a>
+          <button class="copy-btn" data-citation="Whitcombe, D., Iyer, R., & Solberg, M. (2026). Reinforcement Learning for Adaptive Flight Envelope Protection in Fly-by-Wire Systems. JATAIR, 6(2), 98-117. https://doi.org/10.5281/jatair.2026.0602.098">Copy citation</button>
+          <a href="#" class="btn btn-ghost btn-small">View PDF</a>
         </div>
       </article>
 
+      <article class="citation-card" data-article-card data-topic="atc">
+        <div class="citation-card__head">
+          <span class="citation-card__tag gold">Survey</span>
+          <span class="citation-card__pages">JATAIR 6(2), pp. 74–97</span>
+        </div>
+        <h3 class="citation-card__title"><a href="#">Machine Learning for Air Traffic Conflict Prediction: A Systematic Review</a></h3>
+        <p class="citation-card__authors">A. Velasquez, T. Nakamura</p>
+        <p class="citation-card__abstract">Surveys 52 studies applying machine learning to short- and medium-term conflict prediction in air traffic management.</p>
+        <div class="citation-card__meta">Velasquez, A., & Nakamura, T. (2026). JATAIR, 6(2), 74–97. https://doi.org/10.5281/jatair.2026.0602.074</div>
+        <div class="citation-card__actions">
+          <button class="copy-btn" data-citation="Velasquez, A., & Nakamura, T. (2026). Machine Learning for Air Traffic Conflict Prediction: A Systematic Review. JATAIR, 6(2), 74-97. https://doi.org/10.5281/jatair.2026.0602.074">Copy citation</button>
+          <a href="#" class="btn btn-ghost btn-small">View PDF</a>
+        </div>
+      </article>
 
+      <article class="citation-card" data-article-card data-topic="autonomy">
+        <div class="citation-card__head">
+          <span class="citation-card__tag">Research Article</span>
+          <span class="citation-card__pages">JATAIR 6(2), pp. 50–73</span>
+        </div>
+        <h3 class="citation-card__title"><a href="#">Vision-Based Autonomous Landing for Fixed-Wing UAVs in GPS-Denied Environments</a></h3>
+        <p class="citation-card__authors">K. Adeyemi, S. Park, F. Rinaldi</p>
+        <p class="citation-card__abstract">Presents a monocular vision pipeline for runway detection and glideslope estimation, reducing lateral touchdown error by 38% relative to an inertial-only baseline.</p>
+        <div class="citation-card__meta">Adeyemi, K., Park, S., & Rinaldi, F. (2026). JATAIR, 6(2), 50–73. https://doi.org/10.5281/jatair.2026.0602.050</div>
+        <div class="citation-card__actions">
+          <button class="copy-btn" data-citation="Adeyemi, K., Park, S., & Rinaldi, F. (2026). Vision-Based Autonomous Landing for Fixed-Wing UAVs in GPS-Denied Environments. JATAIR, 6(2), 50-73. https://doi.org/10.5281/jatair.2026.0602.050">Copy citation</button>
+          <a href="#" class="btn btn-ghost btn-small">View PDF</a>
+        </div>
+      </article>
+
+      <article class="citation-card" data-article-card data-topic="maintenance">
+        <div class="citation-card__head">
+          <span class="citation-card__tag">Research Article</span>
+          <span class="citation-card__pages">JATAIR 6(2), pp. 30–49</span>
+        </div>
+        <h3 class="citation-card__title"><a href="#">Predictive Maintenance of Turbofan Engines Using Multivariate Sensor Fusion</a></h3>
+        <p class="citation-card__authors">F. Rinaldi, J. Oduya</p>
+        <p class="citation-card__abstract">Combines vibration, thermal, and exhaust gas temperature sensor streams in a multivariate LSTM model to forecast turbofan component degradation ahead of scheduled maintenance windows.</p>
+        <div class="citation-card__meta">Rinaldi, F., & Oduya, J. (2026). JATAIR, 6(2), 30–49. https://doi.org/10.5281/jatair.2026.0602.030</div>
+        <div class="citation-card__actions">
+          <button class="copy-btn" data-citation="Rinaldi, F., & Oduya, J. (2026). Predictive Maintenance of Turbofan Engines Using Multivariate Sensor Fusion. JATAIR, 6(2), 30-49. https://doi.org/10.5281/jatair.2026.0602.030">Copy citation</button>
+          <a href="#" class="btn btn-ghost btn-small">View PDF</a>
+        </div>
+      </article>
+
+      <article class="citation-card" data-article-card data-topic="avionics">
+        <div class="citation-card__head">
+          <span class="citation-card__tag">Research Article</span>
+          <span class="citation-card__pages">JATAIR 6(1), pp. 88–110</span>
+        </div>
+        <h3 class="citation-card__title"><a href="#">Digital Twin Architectures for Real-Time Structural Load Monitoring in Airframes</a></h3>
+        <p class="citation-card__authors">M. Solberg, A. Velasquez</p>
+        <p class="citation-card__abstract">Describes a digital twin pipeline synchronizing strain gauge telemetry with a finite-element model to estimate real-time fatigue accumulation across primary airframe structures.</p>
+        <div class="citation-card__meta">Solberg, M., & Velasquez, A. (2026). JATAIR, 6(1), 88–110. https://doi.org/10.5281/jatair.2026.0601.088</div>
+        <div class="citation-card__actions">
+          <button class="copy-btn" data-citation="Solberg, M., & Velasquez, A. (2026). Digital Twin Architectures for Real-Time Structural Load Monitoring in Airframes. JATAIR, 6(1), 88-110. https://doi.org/10.5281/jatair.2026.0601.088">Copy citation</button>
+          <a href="#" class="btn btn-ghost btn-small">View PDF</a>
+        </div>
+      </article>
+
+      <article class="citation-card" data-article-card data-topic="hf">
+        <div class="citation-card__head">
+          <span class="citation-card__tag">Short Communication</span>
+          <span class="citation-card__pages">JATAIR 6(1), pp. 60–87</span>
+        </div>
+        <h3 class="citation-card__title"><a href="#">Natural Language Interfaces for Pilot-ATC Communication Logging and Readback Verification</a></h3>
+        <p class="citation-card__authors">T. Nakamura, D. Whitcombe</p>
+        <p class="citation-card__abstract">Evaluates a speech-to-text and intent verification pipeline for automatically flagging readback discrepancies in pilot-controller communication, tested against 4,000 recorded transmissions.</p>
+        <div class="citation-card__meta">Nakamura, T., & Whitcombe, D. (2026). JATAIR, 6(1), 60–87. https://doi.org/10.5281/jatair.2026.0601.060</div>
+        <div class="citation-card__actions">
+          <button class="copy-btn" data-citation="Nakamura, T., & Whitcombe, D. (2026). Natural Language Interfaces for Pilot-ATC Communication Logging and Readback Verification. JATAIR, 6(1), 60-87. https://doi.org/10.5281/jatair.2026.0601.060">Copy citation</button>
+          <a href="#" class="btn btn-ghost btn-small">View PDF</a>
+        </div>
+      </article>
+
+      <article class="citation-card" data-article-card data-topic="autonomy">
+        <div class="citation-card__head">
+          <span class="citation-card__tag">Research Article</span>
+          <span class="citation-card__pages">JATAIR 6(1), pp. 32–59</span>
+        </div>
+        <h3 class="citation-card__title"><a href="#">Swarm Coordination Algorithms for Multi-UAV Search and Rescue Operations</a></h3>
+        <p class="citation-card__authors">K. Adeyemi, S. Park</p>
+        <p class="citation-card__abstract">Proposes a decentralized coordination protocol for multi-UAV search patterns under intermittent communication, validated in a simulated mountainous terrain environment.</p>
+        <div class="citation-card__meta">Adeyemi, K., & Park, S. (2026). JATAIR, 6(1), 32–59. https://doi.org/10.5281/jatair.2026.0601.032</div>
+        <div class="citation-card__actions">
+          <button class="copy-btn" data-citation="Adeyemi, K., & Park, S. (2026). Swarm Coordination Algorithms for Multi-UAV Search and Rescue Operations. JATAIR, 6(1), 32-59. https://doi.org/10.5281/jatair.2026.0601.032">Copy citation</button>
+          <a href="#" class="btn btn-ghost btn-small">View PDF</a>
+        </div>
+      </article>
+
+      <article class="citation-card" data-article-card data-topic="hf">
+        <div class="citation-card__head">
+          <span class="citation-card__tag">Research Article</span>
+          <span class="citation-card__pages">JATAIR 5(4), pp. 70–99</span>
+        </div>
+        <h3 class="citation-card__title"><a href="#">Explainable AI for Pilot Decision Support in Adverse Weather Diversion</a></h3>
+        <p class="citation-card__authors">J. Oduya, M. Solberg</p>
+        <p class="citation-card__abstract">Compares attention-based explanation methods for a diversion-recommendation model, measuring pilot trust and decision time in a fixed-base simulator study with 24 commercial pilots.</p>
+        <div class="citation-card__meta">Oduya, J., & Solberg, M. (2025). JATAIR, 5(4), 70–99. https://doi.org/10.5281/jatair.2025.0504.070</div>
+        <div class="citation-card__actions">
+          <button class="copy-btn" data-citation="Oduya, J., & Solberg, M. (2025). Explainable AI for Pilot Decision Support in Adverse Weather Diversion. JATAIR, 5(4), 70-99. https://doi.org/10.5281/jatair.2025.0504.070">Copy citation</button>
+          <a href="#" class="btn btn-ghost btn-small">View PDF</a>
+        </div>
+      </article>
+
+      <article class="citation-card" data-article-card data-topic="maintenance">
+        <div class="citation-card__head">
+          <span class="citation-card__tag">Research Article</span>
+          <span class="citation-card__pages">JATAIR 5(3), pp. 85–112</span>
+        </div>
+        <h3 class="citation-card__title"><a href="#">Federated Learning Across Airline Fleets for Predictive Component Failure</a></h3>
+        <p class="citation-card__authors">F. Rinaldi, A. Velasquez</p>
+        <p class="citation-card__abstract">Applies federated learning across four partner airline fleets to train a shared component failure model without centralizing proprietary maintenance logs.</p>
+        <div class="citation-card__meta">Rinaldi, F., & Velasquez, A. (2025). JATAIR, 5(3), 85–112. https://doi.org/10.5281/jatair.2025.0503.085</div>
+        <div class="citation-card__actions">
+          <button class="copy-btn" data-citation="Rinaldi, F., & Velasquez, A. (2025). Federated Learning Across Airline Fleets for Predictive Component Failure. JATAIR, 5(3), 85-112. https://doi.org/10.5281/jatair.2025.0503.085">Copy citation</button>
+          <a href="#" class="btn btn-ghost btn-small">View PDF</a>
+        </div>
+      </article>
+
+      <div class="no-results">No articles match your search. Try a different keyword or topic.</div>
 
     </div>
   </section>
