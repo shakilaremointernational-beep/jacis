@@ -242,7 +242,7 @@ document.getElementById('submit-form').addEventListener('submit', function(e) {
     cover_letter: this.querySelector('#cover-letter').value,
   };
 
-  emailjs.send('service_zpjw8xv', 'template_00msec9', params)
+  emailjs.send('service_zpjw8xv', 'template_e7123ab', params)
     .then(() => {
       status.textContent = 'Manuscript submitted successfully! You will receive a tracking number by email shortly.';
       status.classList.add('show', 'success');
