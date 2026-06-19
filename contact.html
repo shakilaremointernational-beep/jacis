@@ -8,6 +8,8 @@
 <link rel="stylesheet" href="styles.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@500;600;700&family=Source+Sans+3:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script>emailjs.init('R8cs7GdvNTzsKLHwb');</script>
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
@@ -74,7 +76,7 @@
       </div>
 
       <div class="form-card" style="margin-top: 32px; max-width: 640px;">
-        <form data-submission-form novalidate>
+        <form id="contact-form" novalidate>
           <div class="field">
             <label for="c-name">Name</label>
             <input type="text" id="c-name" name="name" required>
@@ -149,5 +151,41 @@
 </footer>
 
 <script src="script.js"></script>
+<script>
+document.getElementById('contact-form').addEventListener('submit', function(e) {
+  e.preventDefault();
+  const btn = this.querySelector('button[type="submit"]');
+  const status = this.querySelector('.form-status');
+  btn.textContent = 'Sending...';
+  btn.disabled = true;
+
+  const params = {
+    name: this.querySelector('#c-name').value,
+    email: this.querySelector('#c-email').value,
+    article_type: this.querySelector('#c-subject').value,
+    message: this.querySelector('#c-message').value,
+    title: 'Contact Form — ' + this.querySelector('#c-subject').value,
+    affiliation: '',
+    topic_area: '',
+    abstract: this.querySelector('#c-message').value,
+    keywords: '',
+    cover_letter: '',
+  };
+
+  emailjs.send('service_zpjw8xv', 'template_00msec9', params)
+    .then(() => {
+      status.textContent = 'Message sent! The editorial office will respond within 2 business days.';
+      status.classList.add('show', 'success');
+      this.reset();
+      btn.textContent = 'Send message';
+      btn.disabled = false;
+    }, () => {
+      status.textContent = 'Something went wrong. Please email us directly at jatairjournal@gmail.com.';
+      status.classList.add('show');
+      btn.textContent = 'Send message';
+      btn.disabled = false;
+    });
+});
+</script>
 </body>
 </html>

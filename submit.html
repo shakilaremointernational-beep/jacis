@@ -8,6 +8,8 @@
 <link rel="stylesheet" href="styles.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@500;600;700&family=Source+Sans+3:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script>emailjs.init('R8cs7GdvNTzsKLHwb');</script>
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
@@ -61,7 +63,7 @@
       <div class="layout-2col">
 
         <div class="form-card">
-          <form data-submission-form novalidate>
+          <form id="submit-form" novalidate>
 
             <div class="field">
               <label for="title">Manuscript title</label>
@@ -220,5 +222,40 @@
 </footer>
 
 <script src="script.js"></script>
+<script>
+document.getElementById('submit-form').addEventListener('submit', function(e) {
+  e.preventDefault();
+  const btn = this.querySelector('button[type="submit"]');
+  const status = this.querySelector('.form-status');
+  btn.textContent = 'Sending...';
+  btn.disabled = true;
+
+  const params = {
+    name: this.querySelector('#corresponding-author').value,
+    email: this.querySelector('#email').value,
+    affiliation: this.querySelector('#affiliation').value,
+    article_type: this.querySelector('#article-type').value,
+    topic_area: this.querySelector('#topic-area').value,
+    title: this.querySelector('#title').value,
+    abstract: this.querySelector('#abstract').value,
+    keywords: this.querySelector('#keywords').value,
+    cover_letter: this.querySelector('#cover-letter').value,
+  };
+
+  emailjs.send('service_zpjw8xv', 'template_00msec9', params)
+    .then(() => {
+      status.textContent = 'Manuscript submitted successfully! You will receive a tracking number by email shortly.';
+      status.classList.add('show', 'success');
+      this.reset();
+      btn.textContent = 'Submit manuscript';
+      btn.disabled = false;
+    }, () => {
+      status.textContent = 'Something went wrong. Please email us directly at jatairjournal@gmail.com.';
+      status.classList.add('show');
+      btn.textContent = 'Submit manuscript';
+      btn.disabled = false;
+    });
+});
+</script>
 </body>
 </html>
