@@ -123,9 +123,9 @@
             </div>
 
             <div class="field">
-              <label for="manuscript-file">Manuscript file</label>
-              <input type="file" id="manuscript-file" name="manuscript-file" accept=".pdf,.doc,.docx">
-              <p class="hint">PDF or Word document, anonymized for double-blind review.</p>
+              <label for="manuscript-link">Manuscript file link</label>
+              <input type="url" id="manuscript-link" name="manuscript-link" placeholder="https://drive.google.com/... or https://dropbox.com/..." required>
+              <p class="hint">Upload your manuscript (PDF or Word, anonymized for double-blind review) to Google Drive or Dropbox, set sharing to "Anyone with the link", and paste the link here.</p>
             </div>
 
             <div class="field">
@@ -157,6 +157,7 @@
               <li>Abstract is 150–250 words</li>
               <li>References follow IEEE numbered style</li>
               <li>Title page prepared as a separate file</li>
+              <li>Manuscript link set to "Anyone with the link can view"</li>
             </ul>
           </div>
           <div class="sidebar-card">
@@ -230,6 +231,9 @@ document.getElementById('submit-form').addEventListener('submit', function(e) {
   btn.textContent = 'Sending...';
   btn.disabled = true;
 
+  const manuscriptLink = this.querySelector('#manuscript-link').value;
+  const coverLetter = this.querySelector('#cover-letter').value;
+
   const params = {
     name: this.querySelector('#corresponding-author').value,
     email: this.querySelector('#email').value,
@@ -239,7 +243,7 @@ document.getElementById('submit-form').addEventListener('submit', function(e) {
     title: this.querySelector('#title').value,
     abstract: this.querySelector('#abstract').value,
     keywords: this.querySelector('#keywords').value,
-    cover_letter: this.querySelector('#cover-letter').value,
+    cover_letter: 'Manuscript file link: ' + manuscriptLink + (coverLetter ? '\n\n' + coverLetter : ''),
   };
 
   emailjs.send('service_zpjw8xv', 'template_e7123ab', params)
